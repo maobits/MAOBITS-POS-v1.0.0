@@ -1,0 +1,263 @@
+{
+  "schema": "maobits.pos.assembly-graph",
+  "version": 1,
+  "nodes": [
+    {
+      "id": "hito-01-foundation",
+      "hito": 1,
+      "title": "Bastidor Expo, navegación, theme e i18n"
+    },
+    {
+      "id": "hito-02-database",
+      "hito": 2,
+      "title": "SQLite y migraciones"
+    },
+    {
+      "id": "hito-03-security",
+      "hito": 3,
+      "title": "Seguridad y sesión"
+    },
+    {
+      "id": "hito-04-permissions",
+      "hito": 4,
+      "title": "Roles y permisos"
+    },
+    {
+      "id": "hito-05-catalog-base",
+      "hito": 5,
+      "title": "Proveedores y categorías"
+    },
+    {
+      "id": "hito-06-products",
+      "hito": 6,
+      "title": "Productos, imágenes y EAN-13"
+    },
+    {
+      "id": "hito-07-inventory",
+      "hito": 7,
+      "title": "Inventario y compras"
+    },
+    {
+      "id": "hito-08-customers",
+      "hito": 8,
+      "title": "Clientes y cuenta corriente"
+    },
+    {
+      "id": "hito-09-pos",
+      "hito": 9,
+      "title": "POS y carrito"
+    },
+    {
+      "id": "hito-10-checkout",
+      "hito": 10,
+      "title": "Checkout transaccional"
+    },
+    {
+      "id": "hito-11-cash",
+      "hito": 11,
+      "title": "Caja y turnos"
+    },
+    {
+      "id": "hito-12-sales",
+      "hito": 12,
+      "title": "Ventas, reversión y PDF"
+    },
+    {
+      "id": "hito-13-reports",
+      "hito": 13,
+      "title": "Dashboard y reportes"
+    },
+    {
+      "id": "hito-14-backup-settings",
+      "hito": 14,
+      "title": "Backup, restore y administración"
+    },
+    {
+      "id": "hito-15-qa-course",
+      "hito": 15,
+      "title": "QA y MAOBITS Room"
+    }
+  ],
+  "edges": [
+    {
+      "from": "hito-01-foundation",
+      "to": "hito-02-database",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-02-database",
+      "to": "hito-03-security",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-03-security",
+      "to": "hito-04-permissions",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-04-permissions",
+      "to": "hito-05-catalog-base",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-05-catalog-base",
+      "to": "hito-06-products",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-06-products",
+      "to": "hito-07-inventory",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-04-permissions",
+      "to": "hito-08-customers",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-02-database",
+      "to": "hito-08-customers",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-06-products",
+      "to": "hito-09-pos",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-09-pos",
+      "to": "hito-10-checkout",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-07-inventory",
+      "to": "hito-10-checkout",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-08-customers",
+      "to": "hito-10-checkout",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-10-checkout",
+      "to": "hito-11-cash",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-10-checkout",
+      "to": "hito-12-sales",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-11-cash",
+      "to": "hito-12-sales",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-12-sales",
+      "to": "hito-13-reports",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-07-inventory",
+      "to": "hito-13-reports",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-08-customers",
+      "to": "hito-13-reports",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-02-database",
+      "to": "hito-14-backup-settings",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-06-products",
+      "to": "hito-14-backup-settings",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-08-customers",
+      "to": "hito-14-backup-settings",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-12-sales",
+      "to": "hito-14-backup-settings",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-01-foundation",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-02-database",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-03-security",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-04-permissions",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-05-catalog-base",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-06-products",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-07-inventory",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-08-customers",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-09-pos",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-10-checkout",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-11-cash",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-12-sales",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-13-reports",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    },
+    {
+      "from": "hito-14-backup-settings",
+      "to": "hito-15-qa-course",
+      "kind": "requires"
+    }
+  ]
+}

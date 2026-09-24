@@ -1,0 +1,89 @@
+{
+  "id": "hito-15-qa-course",
+  "hito": 15,
+  "title": "QA y MAOBITS Room",
+  "kind": "maobits-pos-module",
+  "version": "1.0.0",
+  "dependencies": [
+    "foundation",
+    "database",
+    "security",
+    "permissions",
+    "catalog-base",
+    "products",
+    "inventory",
+    "customers",
+    "pos",
+    "checkout",
+    "cash",
+    "sales",
+    "reports",
+    "backup-settings"
+  ],
+  "concepts": [
+    "testing",
+    "assembly",
+    "slides",
+    "release"
+  ],
+  "sourcePaths": [
+    "tests",
+    "scripts",
+    "docs/course",
+    "maobits-room"
+  ],
+  "assembly": {
+    "inputContracts": [
+      "Session/User when required",
+      "Repository/Service contracts from dependencies"
+    ],
+    "outputContracts": [
+      "qa-course service/API",
+      "Persisted state where applicable"
+    ],
+    "rule": "The module may be taught independently, then assembled only through declared contracts."
+  },
+  "slides": [
+    {
+      "order": 1,
+      "type": "need",
+      "title": "Necesidad / Why"
+    },
+    {
+      "order": 2,
+      "type": "concept",
+      "title": "Concepto visual"
+    },
+    {
+      "order": 3,
+      "type": "contract",
+      "title": "Contrato de la pieza"
+    },
+    {
+      "order": 4,
+      "type": "code",
+      "title": "Código incremental"
+    },
+    {
+      "order": 5,
+      "type": "simulation",
+      "title": "Simulación / laboratorio"
+    },
+    {
+      "order": 6,
+      "type": "assembly",
+      "title": "Ensamblaje con piezas previas"
+    },
+    {
+      "order": 7,
+      "type": "checkpoint",
+      "title": "Prueba y checkpoint"
+    }
+  ],
+  "verification": [
+    "source syntax",
+    "module-specific unit/integration test",
+    "manual device check when native APIs are used"
+  ],
+  "status": "IMPLEMENTED_SOURCE"
+}

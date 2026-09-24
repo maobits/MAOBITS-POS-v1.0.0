@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MAOBITS Room Slide Module",
+  "type": "object",
+  "required": [
+    "schema",
+    "version",
+    "moduleId",
+    "slides"
+  ],
+  "properties": {
+    "schema": {
+      "const": "maobits.room.slide-module"
+    },
+    "version": {
+      "const": 1
+    },
+    "moduleId": {
+      "type": "string"
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "required": [
+          "order",
+          "type",
+          "title",
+          "objective",
+          "visual",
+          "teacherNotes",
+          "studentAction",
+          "checkpoint"
+        ]
+      }
+    }
+  }
+}

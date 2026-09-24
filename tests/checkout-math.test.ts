@@ -1,0 +1,4 @@
+import { describe, expect, it } from 'vitest';
+import { allocateCheckout, settleCustomer } from '@/modules/checkout/math';
+describe('checkout math', () => { it('keeps prior debt separate from sale total', () => { const s = settleCustomer(50000, 10000, 0, 50000); expect(s.newDebt).toBe(0); expect(s.finalBalance).toBe(10000); }); it('applies customer credit', () => { const s = settleCustomer(50000, -20000, 20000, 30000); expect(s.appliedCredit).toBe(20000); expect(s.newDebt).toBe(0); expect(s.finalBalance).toBe(0); }); it('creates only new unpaid debt', () => { const s = settleCustomer(50000, 0, 0, 35000); expect(s.newDebt).toBe(15000); expect(s.finalBalance).toBe(15000); }); it('allocates discount and tax consistently', () => { const r = allocateCheckout([{ productId: 'a', name: 'A', unitPrice: 10000, taxRateBp: 1900, quantity: 1 }], 1000); expect(r.subtotal).toBe(10000); expect(r.discount).toBe(1000); expect(r.tax).toBe(1710); expect(r.total).toBe(10710); }); });
+

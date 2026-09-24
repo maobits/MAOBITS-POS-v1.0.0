@@ -1,0 +1,77 @@
+{
+  "schema": "maobits.room.slide-module",
+  "version": 1,
+  "moduleId": "hito-09-pos",
+  "slides": [
+    {
+      "order": 1,
+      "type": "need",
+      "title": "Necesidad real",
+      "objective": "Comprender por qué MAOBITS POS necesita POS y carrito",
+      "visual": "Problema → consecuencia → pieza necesaria",
+      "teacherNotes": "Presentar el problema antes de la tecnología. Conceptos: catalog, cart, toast, undo, scanner.",
+      "studentAction": "Identificar qué se rompería o faltaría sin esta pieza.",
+      "checkpoint": "El estudiante explica la necesidad con sus palabras."
+    },
+    {
+      "order": 2,
+      "type": "concept",
+      "title": "Mapa conceptual",
+      "objective": "Construir un modelo mental visual antes del código.",
+      "visual": "Entradas → reglas → salidas",
+      "teacherNotes": "Usar bloques, flechas y estados. No mostrar todavía toda la implementación.",
+      "studentAction": "Relacionar entradas, reglas y salidas.",
+      "checkpoint": "Puede describir el flujo sin leer código."
+    },
+    {
+      "order": 3,
+      "type": "contract",
+      "title": "Contrato de la pieza",
+      "objective": "Definir qué recibe y qué entrega el módulo.",
+      "visual": "Módulo como caja negra con puertos de entrada/salida",
+      "teacherNotes": "Dependencias declaradas: products.",
+      "studentAction": "Reconocer qué contratos permiten desmontar la pieza.",
+      "checkpoint": "Distingue dependencia de implementación interna."
+    },
+    {
+      "order": 4,
+      "type": "code",
+      "title": "Código incremental",
+      "objective": "Implementar únicamente la nueva pieza.",
+      "visual": "Antes / cambio / después",
+      "teacherNotes": "El código de hitos previos permanece estable; modificar solo paths declarados.",
+      "studentAction": "Construir la pieza en modo Calco, Completar o Autónomo.",
+      "checkpoint": "Código compila en el checkpoint local del módulo."
+    },
+    {
+      "order": 5,
+      "type": "simulation",
+      "title": "Laboratorio visual",
+      "objective": "Observar la regla principal sin ruido de interfaz.",
+      "visual": "Simulación de catalog, cart, toast, undo, scanner",
+      "teacherNotes": "Convertir estados y transiciones en elementos interactivos de MAOBITS Room.",
+      "studentAction": "Predecir el resultado y luego ejecutar la simulación.",
+      "checkpoint": "La predicción coincide o el estudiante explica la diferencia."
+    },
+    {
+      "order": 6,
+      "type": "assembly",
+      "title": "Ensamblaje",
+      "objective": "Conectar esta pieza con las anteriores sin acoplamiento directo.",
+      "visual": "Pieza nueva encaja sobre contratos ya construidos",
+      "teacherNotes": "Mostrar qué archivos se agregan y qué contratos se consumen.",
+      "studentAction": "Montar el módulo usando Services/Repositories declarados.",
+      "checkpoint": "La integración no obliga a reescribir módulos previos."
+    },
+    {
+      "order": 7,
+      "type": "checkpoint",
+      "title": "Prueba y transferencia",
+      "objective": "Demostrar funcionamiento y explicar dónde reutilizar el patrón.",
+      "visual": "Test automático + prueba manual + estado de validación",
+      "teacherNotes": "IMPLEMENTADO no equivale a VALIDADO; APIs nativas requieren dispositivo.",
+      "studentAction": "Ejecutar prueba, registrar evidencia y explicar una aplicación equivalente.",
+      "checkpoint": "Pieza preparada para avanzar al siguiente hito."
+    }
+  ]
+}

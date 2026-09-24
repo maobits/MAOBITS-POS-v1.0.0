@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "MAOBITS POS",
+    "slug": "maobits-pos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "maobitspos",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.maobits.pos"
+    },
+    "android": {
+      "package": "com.maobits.pos",
+      "permissions": [
+        "CAMERA"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "MAOBITS POS usa la cámara para leer códigos de barras."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MAOBITS POS usa tus imágenes para productos y proveedores.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-secure-store",
+      "expo-font",
+      "expo-audio",
+      "expo-sharing",
+      "@react-native-community/datetimepicker"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "maobits": {
+        "organization": "Instituto Maobits S.A.S.",
+        "nit": "902010335-7",
+        "courseReady": true
+      }
+    }
+  }
+}

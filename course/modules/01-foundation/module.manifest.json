@@ -1,0 +1,75 @@
+{
+  "id": "hito-01-foundation",
+  "hito": 1,
+  "title": "Bastidor Expo, navegación, theme e i18n",
+  "kind": "maobits-pos-module",
+  "version": "1.0.0",
+  "dependencies": [],
+  "concepts": [
+    "Expo Router",
+    "design tokens",
+    "i18n",
+    "Zustand preferences"
+  ],
+  "sourcePaths": [
+    "app/_layout.tsx",
+    "app/(tabs)/_layout.tsx",
+    "src/core/theme",
+    "src/core/i18n",
+    "src/stores/preferences.ts"
+  ],
+  "assembly": {
+    "inputContracts": [
+      "Session/User when required",
+      "Repository/Service contracts from dependencies"
+    ],
+    "outputContracts": [
+      "foundation service/API",
+      "Persisted state where applicable"
+    ],
+    "rule": "The module may be taught independently, then assembled only through declared contracts."
+  },
+  "slides": [
+    {
+      "order": 1,
+      "type": "need",
+      "title": "Necesidad / Why"
+    },
+    {
+      "order": 2,
+      "type": "concept",
+      "title": "Concepto visual"
+    },
+    {
+      "order": 3,
+      "type": "contract",
+      "title": "Contrato de la pieza"
+    },
+    {
+      "order": 4,
+      "type": "code",
+      "title": "Código incremental"
+    },
+    {
+      "order": 5,
+      "type": "simulation",
+      "title": "Simulación / laboratorio"
+    },
+    {
+      "order": 6,
+      "type": "assembly",
+      "title": "Ensamblaje con piezas previas"
+    },
+    {
+      "order": 7,
+      "type": "checkpoint",
+      "title": "Prueba y checkpoint"
+    }
+  ],
+  "verification": [
+    "source syntax",
+    "module-specific unit/integration test",
+    "manual device check when native APIs are used"
+  ],
+  "status": "IMPLEMENTED_SOURCE"
+}

@@ -1,0 +1,162 @@
+{
+  "format": "maobits.room.course-map",
+  "version": 1,
+  "course": "MAOBITS POS v1.0.0",
+  "modules": [
+    {
+      "id": "hito-01-foundation",
+      "hito": 1,
+      "title": "Bastidor Expo, navegación, theme e i18n",
+      "dependencies": [],
+      "manifest": "course/modules/01-foundation/module.manifest.json"
+    },
+    {
+      "id": "hito-02-database",
+      "hito": 2,
+      "title": "SQLite y migraciones",
+      "dependencies": [
+        "foundation"
+      ],
+      "manifest": "course/modules/02-database/module.manifest.json"
+    },
+    {
+      "id": "hito-03-security",
+      "hito": 3,
+      "title": "Seguridad y sesión",
+      "dependencies": [
+        "database"
+      ],
+      "manifest": "course/modules/03-security/module.manifest.json"
+    },
+    {
+      "id": "hito-04-permissions",
+      "hito": 4,
+      "title": "Roles y permisos",
+      "dependencies": [
+        "security"
+      ],
+      "manifest": "course/modules/04-permissions/module.manifest.json"
+    },
+    {
+      "id": "hito-05-catalog-base",
+      "hito": 5,
+      "title": "Proveedores y categorías",
+      "dependencies": [
+        "permissions"
+      ],
+      "manifest": "course/modules/05-catalog-base/module.manifest.json"
+    },
+    {
+      "id": "hito-06-products",
+      "hito": 6,
+      "title": "Productos, imágenes y EAN-13",
+      "dependencies": [
+        "catalog-base"
+      ],
+      "manifest": "course/modules/06-products/module.manifest.json"
+    },
+    {
+      "id": "hito-07-inventory",
+      "hito": 7,
+      "title": "Inventario y compras",
+      "dependencies": [
+        "products"
+      ],
+      "manifest": "course/modules/07-inventory/module.manifest.json"
+    },
+    {
+      "id": "hito-08-customers",
+      "hito": 8,
+      "title": "Clientes y cuenta corriente",
+      "dependencies": [
+        "permissions",
+        "database"
+      ],
+      "manifest": "course/modules/08-customers/module.manifest.json"
+    },
+    {
+      "id": "hito-09-pos",
+      "hito": 9,
+      "title": "POS y carrito",
+      "dependencies": [
+        "products"
+      ],
+      "manifest": "course/modules/09-pos/module.manifest.json"
+    },
+    {
+      "id": "hito-10-checkout",
+      "hito": 10,
+      "title": "Checkout transaccional",
+      "dependencies": [
+        "pos",
+        "inventory",
+        "customers"
+      ],
+      "manifest": "course/modules/10-checkout/module.manifest.json"
+    },
+    {
+      "id": "hito-11-cash",
+      "hito": 11,
+      "title": "Caja y turnos",
+      "dependencies": [
+        "checkout"
+      ],
+      "manifest": "course/modules/11-cash/module.manifest.json"
+    },
+    {
+      "id": "hito-12-sales",
+      "hito": 12,
+      "title": "Ventas, reversión y PDF",
+      "dependencies": [
+        "checkout",
+        "cash"
+      ],
+      "manifest": "course/modules/12-sales/module.manifest.json"
+    },
+    {
+      "id": "hito-13-reports",
+      "hito": 13,
+      "title": "Dashboard y reportes",
+      "dependencies": [
+        "sales",
+        "inventory",
+        "customers"
+      ],
+      "manifest": "course/modules/13-reports/module.manifest.json"
+    },
+    {
+      "id": "hito-14-backup-settings",
+      "hito": 14,
+      "title": "Backup, restore y administración",
+      "dependencies": [
+        "database",
+        "products",
+        "customers",
+        "sales"
+      ],
+      "manifest": "course/modules/14-backup-settings/module.manifest.json"
+    },
+    {
+      "id": "hito-15-qa-course",
+      "hito": 15,
+      "title": "QA y MAOBITS Room",
+      "dependencies": [
+        "foundation",
+        "database",
+        "security",
+        "permissions",
+        "catalog-base",
+        "products",
+        "inventory",
+        "customers",
+        "pos",
+        "checkout",
+        "cash",
+        "sales",
+        "reports",
+        "backup-settings"
+      ],
+      "manifest": "course/modules/15-qa-course/module.manifest.json"
+    }
+  ]
+}

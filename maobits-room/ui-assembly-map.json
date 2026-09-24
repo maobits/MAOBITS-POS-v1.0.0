@@ -1,0 +1,18 @@
+{
+  "format": "maobits.pos.ui-assembly",
+  "version": 1,
+  "stack": "Expo + React Native",
+  "referencePolicy": "The React/Tailwind/Vite app is UX reference only; no web mocks or DOM are runtime dependencies.",
+  "layers": [
+    {"id":"tokens","path":"src/core/theme/tokens.ts","dependsOn":[]},
+    {"id":"theme","path":"src/core/theme/useAppTheme.ts","dependsOn":["tokens"]},
+    {"id":"primitives","path":"src/shared/ui.tsx","dependsOn":["theme"]},
+    {"id":"navigation","path":"app/(tabs)/_layout.tsx","dependsOn":["primitives","permissions"]},
+    {"id":"dashboard","path":"app/(tabs)/dashboard.tsx","dependsOn":["primitives","reports"]},
+    {"id":"pos","path":"app/(tabs)/pos.tsx","dependsOn":["primitives","products","cart"]},
+    {"id":"checkout","path":"app/checkout.tsx","dependsOn":["primitives","checkout-service"]},
+    {"id":"inventory","path":"app/(tabs)/inventory.tsx","dependsOn":["primitives","inventory-service"]},
+    {"id":"customers","path":"app/(tabs)/customers.tsx","dependsOn":["primitives","customer-service","account-service"]}
+  ],
+  "slideFlow": ["need","token","primitive","pattern","screen","service-contract","real-data","accessibility","checkpoint"]
+}

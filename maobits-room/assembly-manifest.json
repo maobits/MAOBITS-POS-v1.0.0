@@ -1,0 +1,28 @@
+{
+  "format": "maobits.pos.assembly",
+  "version": 1,
+  "principle": "Screen -> Service -> Repository -> SQLite",
+  "rules": [
+    "One module per conceptual lesson unit",
+    "Previous working modules remain real",
+    "No slide may bypass service contracts to talk directly to SQLite from UI",
+    "Every native capability is labelled IMPLEMENTED until device-validated"
+  ],
+  "order": [
+    "hito-01-foundation",
+    "hito-02-database",
+    "hito-03-security",
+    "hito-04-permissions",
+    "hito-05-catalog-base",
+    "hito-06-products",
+    "hito-07-inventory",
+    "hito-08-customers",
+    "hito-09-pos",
+    "hito-10-checkout",
+    "hito-11-cash",
+    "hito-12-sales",
+    "hito-13-reports",
+    "hito-14-backup-settings",
+    "hito-15-qa-course"
+  ]
+}

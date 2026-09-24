@@ -1,0 +1,43 @@
+{
+  "artifact": "MAOBITS-POS-v1.0.0-FULL",
+  "edition": "EXPO_PREMIUM_MODULAR",
+  "version": "1.0.0",
+  "organization": "Instituto Maobits S.A.S.",
+  "nit": "902010335-7",
+  "runtime": "Expo / React Native (no Tailwind/Vite/DOM runtime)",
+  "architecture": "Screen/Route -> Service -> Repository -> SQLite",
+  "uxArchitecture": "Design Tokens -> Primitives -> Patterns -> Screens -> Domain Modules",
+  "course": {
+    "modules": 15,
+    "slideScenes": 105,
+    "assembly": "modular",
+    "uiAssemblyMap": "maobits-room/ui-assembly-map.json"
+  },
+  "tests": {
+    "vitestFiles": 7,
+    "definedCases": 23,
+    "realExecution": "PENDING_NPM_INSTALL"
+  },
+  "validation": {
+    "sourceValidator": "PASS",
+    "legacyMigration": "PASS",
+    "auxTypecheck": "PASS",
+    "sqliteMigrations": "PASS",
+    "sqliteConstraints": "PASS",
+    "courseContracts": "PASS",
+    "realSdkTypecheck": "PENDING_NPM_INSTALL",
+    "nativeQa": "PENDING_DEVICE"
+  },
+  "fileCountBeforeIntegrity": 183,
+  "extensions": {
+    ".json": 43,
+    ".md": 38,
+    ".mjs": 3,
+    ".py": 2,
+    ".sh": 2,
+    ".ts": 67,
+    ".tsx": 27,
+    "[none]": 1
+  },
+  "generatedAt": "2026-09-22"
+}
